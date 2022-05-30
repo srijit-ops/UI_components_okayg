@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+<!-- boxicons cdn-->
+<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="fw-bold mt-3" style="text-align: center;
+    color: darkslategray;">
+        Social Meet 
+      </h1>
+    <div class="container py-5 px-4 m-auto my-4" style="box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;border-radius: 7px; background: beige;
+    border: 1px solid darkgray;">
+      <div class="row f1  justify-content-evenly align-items-center flex-wrap" v-if="socialMeet">
+
+        <div class="col-md-4 col-sm-12">
+            <label for="zq" class="fw-bold edit mb-sm-3 mb-md-0" style="font-size: 1.2rem;">Full Name</label>
+        </div>
+        <div class="col-md-7 col-sm-12">
+    
+            <input required type="text" class="form-control" id="zq" v-model="socialMeet.name" placeholder="Name" style="background-color: #E8E8E8;">
+    
+        </div>
+        
+    </div>
+    <p class="mt-3 mb-4 pb-3" style="font-size: 0.9rem;
+    color: dimgrey; text-align: center;border-bottom: 1px solid darkgrey;">Description about the field. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ducimus vel, possimus fuga sequi accusantium soluta adipisci expedita omnis quo?</p>
+    
+    <div class="row f1 justify-content-evenly align-items-center flex-wrap" v-if="socialMeet && socialMeet.objDetails">
+    
+        <div class="col-md-4 col-sm-12">
+            <label for="zq" class="fw-bold edit mb-sm-3 mb-md-0" style="font-size: 1.2rem;">Email</label>
+        </div>
+        <div class="col-md-7 col-sm-12">
+    
+            <input required type="email" class="form-control" id="zq" v-model="socialMeet.objDetails.email" placeholder="Email" style="background-color: #E8E8E8;">
+    
+        </div>
+        
+    </div>
+    <p class="mt-3  mb-4 pb-3" style="font-size: 0.9rem;
+    color: dimgrey;text-align: center;border-bottom: 1px solid darkgrey;">Description about the field. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ducimus vel, possimus fuga sequi accusantium soluta adipisci expedita omnis quo?</p>
+    
+    <div class="row f1 justify-content-evenly align-items-center flex-wrap" v-if="socialMeet && socialMeet.objDetails">
+    
+        <div class="col-md-4 col-sm-12">
+            <label for="zq" class="fw-bold edit mb-sm-3 mb-md-0" style="font-size: 1.2rem;">Phone</label>
+        </div>
+        <div class="col-md-7 col-sm-12">
+    
+            <input required type="tel" class="form-control" id="zq" v-model="socialMeet.objDetails.phone" placeholder="Phone" style="background-color: #E8E8E8;">
+    
+        </div>
+        
+    </div>
+    <p class="mt-3  mb-4 pb-3" style="font-size: 0.9rem;
+    color: dimgrey;text-align: center;border-bottom: 1px solid darkgrey;">Description about the field. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ducimus vel, possimus fuga sequi accusantium soluta adipisci expedita omnis quo?</p>
+    
+    <div class="row  justify-content-evenly align-items-center flex-wrap" v-if="socialMeet && socialMeet.objDetails">
+    
+        <div class="col-md-4 col-sm-12">
+            <label for="zq" class="fw-bold edit mb-sm-3 mb-md-0" style="font-size: 1.2rem;"> A OR S</label>
+        </div>
+        <div class="col-md-7 col-sm-10">
+    
+    
+            <div class="form-check form-check-inline mb-2">
+                <input class="form-check-input" type="radio" name="zr276707" v-model="socialMeet.objDetails.AshramHaiYaSamiti" id="z827041" value="Ashram">
+                <label class="form-check-label" for="z827041">A</label>
+            </div>
+    
+    
+            <div class="form-check form-check-inline mb-2">
+                <input class="form-check-input" type="radio" name="zr276707" v-model="socialMeet.objDetails.AshramHaiYaSamiti" id="z2974523" value="Samiti">
+                <label class="form-check-label" for="z2974523">S</label>
+            </div>
+    
+    
+    
+        </div>
+        
+    </div>
+    <p class="mt-2  mb-3" style="font-size: 0.9rem;
+    color: dimgrey;text-align: center;">Description about the field. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ducimus vel, possimus fuga sequi accusantium soluta adipisci expedita omnis quo?</p>
+    </div>
+  
+  <!--location-->
+  <div class="container py-4 px-4 m-auto my-4" style="box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;border-radius: 7px; background: lightgreen;
+  border: 1px solid darkgray;">
+    
+        
+            <h3 class="fw-bold ">Location <i class="bx bx-map fw-bold"></i></h3>
+        
+        
+            <div class="row justify-content-between mb-3 mt-4">
+                <div class="col-md-3 col-sm-12">
+                    <label class=" col-form-label fw-bold" style="font-size: 1.12rem;">Country</label>
+                </div>
+                
+                <div class="col-md-8 col-sm-12">
+                    <!--<input type="text" class="form-control">-->
+                    <select class="form-control form__input input__country" tabindex="4" id="country" name="country" v-model="socialMeet.objDetails.country_id" @change="onChangeCountry($event)" style="background: #E8E8E8;
+                    color: darkslategrey;">
+                        <option value="-1" selected>Select Your Country</option>
+                        <option v-for="c in jCountries" :value="c.i">{{c.n}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row justify-content-between my-3">
+                <div class="col-md-3 col-sm-12">
+                    <label class=" col-form-label fw-bold" style="font-size: 1.12rem;">State</label>
+                </div>
+                
+                <div class="col-md-8 col-sm-12">
+                    <!--<input type="text" class="form-control">-->
+                    <select tabindex="5" required class="form-control form__input input__state" id="state" name="state" v-model="socialMeet.objDetails.state_id" @change="onChangeState($event)" style="background: #E8E8E8;
+                    color: darkslategrey;">
+                        <option v-for="c in derivedCountryObj.s" :value="c.i">{{c.n}}</option>
+                    </select>
+    
+                </div>
+            </div>
+            <div class="row justify-content-between my-3">
+                <div class="col-md-3 col-sm-12">
+                    <label class=" col-form-label fw-bold" style="font-size: 1.12rem;">City</label>
+                </div>
+                
+                <div class="col-md-8 col-sm-12">
+                    <!--<input type="text" class="form-control">-->
+                    <select tabindex="6" v-show="true" class="form-control  form__input input__district" id="district" name="district" v-model="socialMeet.objDetails.city_id" @change="onChangeCity($event)" style="background: #E8E8E8;
+                    color: darkslategrey;">
+                        <option v-for="c in districtList" :value="c.i">{{c.n}}</option>
+                    </select>
+                </div>
+            </div>
+        
+        <!--<div class="text-end pt-2">-->
+        <!--    <button type="button"  @click="updateUser({t:'location' })" class="btn btn-outline-primary">Save</button>-->
+        <!--</div>-->
+    
+  </div>
+  
+  
+  
+  <!--
+  <div class="row f1 " v-if="socialMeet && socialMeet.objDetails">
+  
+  <div class="col-md-4 col-sm-12">
+  <label for="zq">State_id</label>
+  </div>
+  <div class="col-md-7 col-sm-10">
+   
+  <input type="text" class="form-control" id="zq" v-model="socialMeet.objDetails.state_id" placeholder="State_id">
+  
+  </div>
+  <div class="col-md-1 col-sm-2">
+  
+  </div>
+  </div>
+  
+  <div class="row f1 " v-if="socialMeet && socialMeet.objDetails">
+  
+  <div class="col-md-4 col-sm-12">
+  <label for="zq">State_code</label>
+  </div>
+  <div class="col-md-7 col-sm-10">
+   
+  <input type="text" class="form-control" id="zq" v-model="socialMeet.objDetails.state_code" placeholder="State_code">
+  
+  </div>
+  <div class="col-md-1 col-sm-2">
+  
+  </div>
+  </div>
+  
+  <div class="row f1 " v-if="socialMeet && socialMeet.objDetails">
+  
+  <div class="col-md-4 col-sm-12">
+  <label for="zq">State_name</label>
+  </div>
+  <div class="col-md-7 col-sm-10">
+   
+  <input type="text" class="form-control" id="zq" v-model="socialMeet.objDetails.state_name" placeholder="State_name">
+  
+  </div>
+  <div class="col-md-1 col-sm-2">
+  
+  </div>
+  </div>
+  
+  <div class="row f1 " v-if="socialMeet && socialMeet.objDetails">
+  
+  <div class="col-md-4 col-sm-12">
+  <label for="zq">Country_id</label>
+  </div>
+  <div class="col-md-7 col-sm-10">
+   
+  <input type="text" class="form-control" id="zq" v-model="socialMeet.objDetails.country_id" placeholder="Country_id">
+  
+  </div>
+  <div class="col-md-1 col-sm-2">
+  
+  </div>
+  </div>
+  
+  <div class="row f1 " v-if="socialMeet && socialMeet.objDetails">
+  
+  <div class="col-md-4 col-sm-12">
+  <label for="zq">Country_code</label>
+  </div>
+  <div class="col-md-7 col-sm-10">
+   
+  <input type="text" class="form-control" id="zq" v-model="socialMeet.objDetails.country_code" placeholder="Country_code">
+  
+  </div>
+  <div class="col-md-1 col-sm-2">
+  
+  </div>
+  </div>
+  
+  <div class="row f1 " v-if="socialMeet && socialMeet.objDetails">
+  
+  <div class="col-md-4 col-sm-12">
+  <label for="zq">Country_name</label>
+  </div>
+  <div class="col-md-7 col-sm-10">
+   
+  <input type="text" class="form-control" id="zq" v-model="socialMeet.objDetails.country_name" placeholder="Country_name">
+  
+  </div>
+  <div class="col-md-1 col-sm-2">
+  
+  </div>
+  </div>
+  
+  <div class="row f1 " v-if="socialMeet && socialMeet.objDetails">
+  
+  <div class="col-md-4 col-sm-12">
+  <label for="zq">City</label>
+  </div>
+  <div class="col-md-7 col-sm-10">
+   
+  <input type="text" class="form-control" id="zq" v-model="socialMeet.objDetails.city" placeholder="City">
+  
+  </div>
+  <div class="col-md-1 col-sm-2">
+  
+  </div>
+  </div>
+  
+  <div class="row f1 " v-if="socialMeet && socialMeet.objDetails">
+  
+  <div class="col-md-4 col-sm-12">
+  <label for="zq">Country</label>
+  </div>
+  <div class="col-md-7 col-sm-10">
+   
+  <input type="text" class="form-control" id="zq" v-model="socialMeet.objDetails.country" placeholder="Country">
+  
+  </div>
+  <div class="col-md-1 col-sm-2">
+  
+  </div>
+  </div>
+  -->
+  <div class="contaier py-4 px-4 m-auto my-4" style="box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;border-radius: 7px; background: lightblue;
+  border: 1px solid darkgray;">
+  <div class="row f1 " v-if="socialMeet && socialMeet.objDetails">
+  
+    <div class="col-md-4 col-sm-12">
+        <label for="zq" class="fw-bold mb-sm-3 mb-md-0 edit" style="font-size: 1.2rem;">Meeting Way  <i class='bx bx-conversation fw-bold'></i></label>
+    </div>
+    <div class="col-md-7 col-sm-10">
+
+
+        <div class="form-check form-check-inline mb-3">
+            <input class="form-check-input" type="checkbox" id="z3329903" value="Laptop" v-model="socialMeet.objDetails.meetingWay">
+            <label for="z3329903">Laptop</label>
+        </div>
+        <br />
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="z7340149" value="Mobile" v-model="socialMeet.objDetails.meetingWay">
+            <label for="z7340149">Mobile</label>
+        </div>
+        <br />
+
+
+    </div>
+    <div class="col-md-1 col-sm-2">
+
+    </div>
+</div></div>
+  
+<div class="contaier py-4 px-4 m-auto my-4" style="box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;border-radius: 7px; background: lightsalmon;
+border: 1px solid darkgray;">
+<div class="row f1 justify-content-between align-items-center" v-if="socialMeet && socialMeet.objDetails">
+  
+    <div class="col-md-4 col-sm-12">
+        <label for="zq" class="fw-bold edit mb-sm-3 mb-md-0 " style="font-size: 1.2rem;">Zonal Incharge  <i class='bx bxs-group fw-bold'></i></label>
+    </div>
+    <div class="col-md-7 col-sm-10">
+
+        <input type="text" class="form-control" id="zq" v-model="socialMeet.objDetails.zonalIncharge" placeholder="Zonal Incharge" style="background-color: #E8E8E8; color: darkslategray;">
+
+    </div>
+    <div class="col-md-1 col-sm-2">
+
+    </div>
+</div></div>
+
+    <div class="">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-info btn-lg mb-4 fw-bold"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" @click="test1_main_add_1({});" style="font-size: 1rem;">
+            Submit
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Thanks for your submission</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Some text in the modal.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+  
+  </div>
+  
+</body>
+</html>
